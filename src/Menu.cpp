@@ -4,7 +4,7 @@ using namespace jmenu;
 
 Menu::Menu(float _width, float _height)
 {
-    if(!font.loadFromFile("./fonts/arial.ttf")) // error al cargar la fuente de texto
+    if(!font.loadFromFile("src/fonts/arial.ttf")) // error al cargar la fuente de texto
         return;
     
     item[0].setString("Play");
