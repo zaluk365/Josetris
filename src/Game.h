@@ -2,6 +2,9 @@
 #ifndef GAME_H
 #define GAME_H
 
+#define WIDTH 720
+#define HEIGHT 480
+
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "Player.h"
