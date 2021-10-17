@@ -4,7 +4,7 @@ using namespace jmenu;
 
 Menu::Menu(float _width, float _height)
 {
-    if(!font.loadFromFile("fonts/arial.ttf")) // error al cargar la fuente de texto
+    if(!font.loadFromFile("./fonts/arial.ttf")) // error al cargar la fuente de texto
         return;
     
     item[0].setString("Play");
@@ -14,7 +14,6 @@ Menu::Menu(float _width, float _height)
     for (size_t i = 0; i < MAX_MENU_OPTIONS; i++)
     {
         item[i].setFont(font);
-        item[i].setColor(sf::Color::Yellow);
         item[i].setPosition(sf::Vector2f(_width / 2, _height / (MAX_MENU_OPTIONS + 1) * i));
     }
 
@@ -24,4 +23,10 @@ Menu::Menu(float _width, float _height)
 Menu::~Menu()
 {
     //
+}
+
+void Menu::draw(sf::RenderWindow &window)
+{
+    for (size_t i = 0; i < MAX_MENU_OPTIONS; i++)
+        window.draw(item[i]);
 }

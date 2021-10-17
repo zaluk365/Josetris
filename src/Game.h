@@ -8,6 +8,7 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include "Player.h"
+#include "Menu.h"
 
 namespace josetris
 {
@@ -16,6 +17,7 @@ namespace josetris
     private:
         std::vector<jplayer::Player> players;
         sf::RenderWindow mainWindow;
+        jmenu::Menu mainMenu = jmenu::Menu(WIDTH, HEIGHT);
 
     private:
         void processEvents(void);

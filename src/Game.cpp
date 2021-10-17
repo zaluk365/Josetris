@@ -4,7 +4,7 @@ using namespace josetris;
 
 Game::Game(void)
 {
-    // crea la instancia de ventana
+    // crea la instancia de ventana}
     mainWindow.create(sf::VideoMode(WIDTH, HEIGHT), "Josetris", sf::Style::Default);
 }
 
@@ -33,6 +33,7 @@ void Game::render(void)
 {
     mainWindow.clear();
     renderPlayers();
+    mainMenu.draw(mainWindow);
     mainWindow.display();
 }
 
